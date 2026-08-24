@@ -16,16 +16,43 @@ The backend communicates with Ollama through its OpenAI-compatible chat completi
 - **flowchart:** Converts a topic or notes into a Mermaid flowchart
 - **request history:** Stores request results in the browser
 
-## Assignment Context
+## Feature Screenshots
 
-- The FastAPI backend was built and refined (vibe coded) using **OpenCode** with the local **Qwen 2.5 7B** model
-- The **Qwen 2.5 7B** model is used for the main features: **Explain**, **Flashcards**, **Quiz**, and **Study Flowchart**
-- **Qwen 2.5 Coder 7B** model was used for the **Code Assistant** feature, which can generate, explain, debug, and improve code
-- The analysis of uploaded images of handwritten notes is done by calling **Qwen 2.5 VL 7B** 
-- A React frontend was added to better visualize all the features and the outputs
-- The required prompting experiments (zero-shot vs. few-shot, parameter tuning, and structured JSON output) are included in `part4/notebook.ipynb`
-- The required screenshots are included in the screenshots folder
-- The required prompts for opencode (vibe coding) are in `prompts_to_opencode/prompts.md` file
+### Learning workspace
+
+The dashboard keeps the core study tools, specialized code assistant, and vision-based notes analyzer together while showing which local model powers each feature.
+
+![Local LLM Learning Assistant dashboard](screenshots/application-dashboard.png)
+
+### Interactive flashcards
+
+Study material is converted into a responsive set of question cards whose answers can be revealed individually for active recall.
+
+![Generated interactive flashcards](screenshots/interactive-flashcards.png)
+
+### Quiz with answer feedback
+
+Generated multiple-choice questions provide immediate correctness feedback and a concise explanation for each selected answer.
+
+![Interactive quiz with answer feedback](screenshots/interactive-quiz.png)
+
+### Code assistant
+
+The code assistant uses the local coder model to identify errors, return corrected code, and explain the fix.
+
+![Code debugging result and explanation](screenshots/code-debugging-result.png)
+
+### Image-based note analysis
+
+The vision model extracts text from an uploaded notes image, then organizes the result into a summary and a detailed explanation.
+
+![Analyzed study notes with extracted text](screenshots/image-note-analysis.png)
+
+### Study flowchart
+
+Topics or notes can be transformed into a rendered Mermaid flowchart that makes relationships and learning sequences easier to follow.
+
+![Generated Transformer study flowchart](screenshots/generated-study-flowchart.png)
 
 
 ## Project Structure
